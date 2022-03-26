@@ -1173,6 +1173,7 @@ GameObject:
   - component: {fileID: 1503176461}
   - component: {fileID: 1503176465}
   - component: {fileID: 1503176464}
+  - component: {fileID: 1503176466}
   m_Layer: 0
   m_Name: AiCharacter
   m_TagString: Untagged
@@ -1192,7 +1193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5194bc23c9d634842b988d0348a06062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followObject: {fileID: 572327552}
   animator: {fileID: 2124393602}
 --- !u!195 &1503176462
 NavMeshAgent:
@@ -1259,6 +1259,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2124393602}
+--- !u!114 &1503176466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503176460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c226cd52e10915044973fe434ef1cc06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialState: 0
+  navMeshAgent: {fileID: 0}
 --- !u!1 &1803638891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1832809473874912, guid: 68617247be1cad64d8dfe7e3cbbb3174, type: 3}

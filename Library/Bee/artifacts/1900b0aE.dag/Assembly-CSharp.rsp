@@ -354,6 +354,7 @@
 "Assets/AiDeathState.cs"
 "Assets/AiIdleState.cs"
 "Assets/AiLocomotion.cs"
+"Assets/AiSensor.cs"
 "Assets/AiState.cs"
 "Assets/AiStateMachine.cs"
 "Assets/Health.cs"

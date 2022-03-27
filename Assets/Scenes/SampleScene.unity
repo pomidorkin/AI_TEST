@@ -1174,6 +1174,7 @@ GameObject:
   - component: {fileID: 1503176465}
   - component: {fileID: 1503176464}
   - component: {fileID: 1503176466}
+  - component: {fileID: 1503176467}
   m_Layer: 0
   m_Name: AiCharacter
   m_TagString: Untagged
@@ -1276,6 +1277,30 @@ MonoBehaviour:
   followObject: {fileID: 572327552}
   config: {fileID: 11400000, guid: 0ad4f75cf1ee9aa40b3a19ab05978bcd, type: 2}
   ragdoll: {fileID: 1503176465}
+  sensor: {fileID: 0}
+--- !u!114 &1503176467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503176460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292ec5ec827fd73419cb50bd1c24a543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 10.2
+  angle: 30
+  height: 1
+  meshColor: {r: 0.96364665, g: 1, b: 0, a: 1}
+  scanFrequency: 30
+  layers:
+    serializedVersion: 2
+    m_Bits: 0
+  occlusionLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1803638891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1832809473874912, guid: 68617247be1cad64d8dfe7e3cbbb3174, type: 3}

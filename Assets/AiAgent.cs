@@ -11,11 +11,14 @@ public class AiAgent : MonoBehaviour
     [SerializeField] public Transform followObject;
     public AiAgentConfig config;
     public Ragdoll ragdoll;
+    public AiSensor sensor;
     // Start is called before the first frame update
     void Start()
     {
         ragdoll = GetComponent<Ragdoll>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        sensor = GetComponent<AiSensor>();
+
         stateMachine = new AiStateMachine(this);
         stateMachine.RegisterState(new AiChasePlayerScript());
         stateMachine.RegisterState(new AiDeathState());

@@ -5,9 +5,7 @@ using UnityEngine.AI;
 
 public class AiChasePlayerScript : AiState
 {
-    [SerializeField] Transform followObject;
-    private float maxTime = 1.0f;
-    private float maxDistance = 1.0f;
+    //Transform followObject;
     private float timer = 0.0f;
     public void Enter(AiAgent agent)
     {
@@ -33,21 +31,21 @@ public class AiChasePlayerScript : AiState
         timer -= Time.deltaTime;
         if (!agent.navMeshAgent.hasPath)
         {
-            agent.navMeshAgent.destination = followObject.position;
+            agent.navMeshAgent.destination = agent.followObject.position;
         }
 
         if (timer < 0.0f)
         {
-            Vector3 direction = (followObject.position - agent.navMeshAgent.destination);
+            Vector3 direction = (agent.followObject.position - agent.navMeshAgent.destination);
             direction.y = 0;
-            if (direction.sqrMagnitude > maxDistance * maxDistance)
+            if (direction.sqrMagnitude > agent.config.maxDistance * agent.config.maxDistance)
             {
                 if (agent.navMeshAgent.pathStatus != NavMeshPathStatus.PathPartial)
                 {
-                    agent.navMeshAgent.destination = followObject.position;
+                    agent.navMeshAgent.destination = agent.followObject.position;
                 }
             }
-            timer = maxTime;
+            timer = agent.config.maxTime;
         }
     }
 }

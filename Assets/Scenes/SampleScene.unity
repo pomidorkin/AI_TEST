@@ -1271,8 +1271,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c226cd52e10915044973fe434ef1cc06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: 0
-  navMeshAgent: {fileID: 0}
+  initialState: 2
+  navMeshAgent: {fileID: 1503176462}
+  followObject: {fileID: 572327552}
+  config: {fileID: 11400000, guid: 0ad4f75cf1ee9aa40b3a19ab05978bcd, type: 2}
+  ragdoll: {fileID: 1503176465}
 --- !u!1 &1803638891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1832809473874912, guid: 68617247be1cad64d8dfe7e3cbbb3174, type: 3}

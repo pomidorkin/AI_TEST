@@ -53,14 +53,17 @@
     <UnityVersion>2021.2.8f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\AiChasePlayerScript.cs" />
     <Compile Include="Assets\Hitbox.cs" />
+    <Compile Include="Assets\AiState.cs" />
     <Compile Include="Assets\Ragdoll.cs" />
+    <Compile Include="Assets\AiAgent.cs" />
+    <Compile Include="Assets\AiStateMachine.cs" />
     <Compile Include="Assets\Health.cs" />
     <Compile Include="Assets\AiLocomotion.cs" />
-    <Compile Include="Assets\AiState.cs" />
-    <Compile Include="Assets\AiStateMachine.cs" />
-    <Compile Include="Assets\AiAgent.cs" />
-    <Compile Include="Assets\AiChasePlayerScript.cs" />
+    <Compile Include="Assets\AiAgentConfig.cs" />
+    <Compile Include="Assets\AiDeathState.cs" />
+    <Compile Include="Assets\AiIdleState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

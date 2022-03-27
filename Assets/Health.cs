@@ -7,11 +7,11 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
     [SerializeField] private float currentHealth;
-    Ragdoll ragdoll;
+    AiAgent agent;
 
     void Start()
     {
-        ragdoll = GetComponent<Ragdoll>();
+        agent = GetComponent<AiAgent>();
         currentHealth = maxHealth;
 
         var rigidbodies = GetComponentsInChildren<Rigidbody>();
@@ -33,6 +33,7 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        ragdoll.ActivateRagdoll();
+        AiDeathState deathState = agent.stateMachine.GetState(AiStateId.Death) as AiDeathState;
+        agent.stateMachine.ChangeState(AiStateId.Death);
     }
 }
